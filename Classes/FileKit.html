@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FileKit Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/FileKit" class="dashAnchor"></a>
+
+    <a title="FileKit Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          FileKit Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">FileKit Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      FileKit Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/FileKit.html">FileKit</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>FileKit</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">FileKit</span></code></pre>
+
+                </div>
+              </div>
+            <p>Resolves commonly used paths, including the project, executable and working directories.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Path%20to%20Executable%20Folder"></a>
+                <a name="//apple_ref/swift/Section/Path to Executable Folder" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Path%20to%20Executable%20Folder"></a>
+                  <h3 class="section-name"><p>Path to Executable Folder</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7FileKitAAC16executableFolderSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/executableFolder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7FileKitAAC16executableFolderSSvpZ">executableFolder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The absolute path to the folder containing the project executable.</p>
+
+<p>For example, when running an executable called <code>MySwiftProject</code> within Xcode this would be &ldquo;/Users/username/MySwiftProject/.build/debug&rdquo;, when running the same project from the command line this would be &ldquo;/Users/username/MySwiftProject/.build/x86_64-apple-macosx10.10/debug&rdquo;.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">urlString</span> <span class="o">=</span> <span class="kt">FileKit</span><span class="o">.</span><span class="n">executableFolder</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">executableFolder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7FileKitAAC19executableFolderURL10Foundation0E0VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/executableFolderURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7FileKitAAC19executableFolderURL10Foundation0E0VvpZ">executableFolderURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>URL that points to the directory containing the project executable, or, if run from inside Xcode,
+the <code>/.build/debug</code> folder in the project&rsquo;s root folder.</p>
+
+<p>For example when running an executable called <code>MySwiftProject</code> within Xcode this would be
+<code>file:///Users/username/MySwiftProject/.build/debug/</code>.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">urlObject</span> <span class="o">=</span> <span class="kt">FileKit</span><span class="o">.</span><span class="n">executableFolderURL</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">executableFolderURL</span><span class="p">:</span> <span class="kt">URL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Executable"></a>
+                <a name="//apple_ref/swift/Section/Executable" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Executable"></a>
+                  <h3 class="section-name"><p>Executable</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7FileKitAAC13executableURL10Foundation0D0VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/executableURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7FileKitAAC13executableURL10Foundation0D0VvpZ">executableURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>URL that points to the executable.</p>
+
+<p>For example, when running an executable called <code>MySwiftProject</code> from the command line
+this would be:</p>
+
+<p><code>file:///Users/username/MySwiftProject/.build/x86_64-apple-macosx10.10/debug/MySwiftProject</code>.</p>
+
+<p>When running within Xcode it would be:</p>
+
+<p><code>file:///Users/username/Library/Developer/Xcode/DerivedData/MySwiftProject-fjgfjmxrlbhzkhfmxdgeipylyeay/Build/Products/Debug/MySwiftProject</code>.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">urlObject</span> <span class="o">=</span> <span class="kt">FileKit</span><span class="o">.</span><span class="n">executableURL</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">executableURL</span><span class="p">:</span> <span class="kt">URL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Path%20to%20Project%20Folder"></a>
+                <a name="//apple_ref/swift/Section/Path to Project Folder" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Path%20to%20Project%20Folder"></a>
+                  <h3 class="section-name"><p>Path to Project Folder</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7FileKitAAC13projectFolderSSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/projectFolder" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7FileKitAAC13projectFolderSSvpZ">projectFolder</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Absolute path to the directory containing the <code>Package.swift</code> of the project (as determined by
+traversing up the directory structure starting at the directory containing the executable), or
+if no <code>Package.swift</code> is found then the directory containing the executable.</p>
+
+<p>For example, when running an executable called <code>MySwiftProject</code> this would be something like:
+<code>/Users/username/MySwiftProject</code>.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">urlString</span> <span class="o">=</span> <span class="kt">FileKit</span><span class="o">.</span><span class="n">projectFolder</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">projectFolder</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7FileKitAAC16projectFolderURL10Foundation0E0VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/projectFolderURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7FileKitAAC16projectFolderURL10Foundation0E0VvpZ">projectFolderURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>URL that points to the directory containing the <code>Package.swift</code> of the project (as determined
+by traversing up the directory structure starting at the directory containing the executable),
+or if no <code>Package.swift</code> is found then the directory containing the executable.</p>
+
+<p>For example, when running an executable called <code>MySwiftProject</code> this would be something like:
+<code>file:///Users/username/MySwiftProject/</code>.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">urlObject</span> <span class="o">=</span> <span class="kt">FileKit</span><span class="o">.</span><span class="n">projectFolderURL</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">projectFolderURL</span><span class="p">:</span> <span class="kt">URL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Path%20to%20Working%20Directory"></a>
+                <a name="//apple_ref/swift/Section/Path to Working Directory" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Path%20to%20Working%20Directory"></a>
+                  <h3 class="section-name"><p>Path to Working Directory</p>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7FileKitAAC16workingDirectorySSvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/workingDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7FileKitAAC16workingDirectorySSvpZ">workingDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides the standardized working directory accounting for environmental changes.
+When running in Xcode, this returns the directory containing the <code>Package.swift</code> of the project,
+while outside Xcode it returns the current working directory.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">urlString</span> <span class="o">=</span> <span class="kt">FileKit</span><span class="o">.</span><span class="n">workingDirectory</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">workingDirectory</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:7FileKitAAC19workingDirectoryURL10Foundation0E0VvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/workingDirectoryURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:7FileKitAAC19workingDirectoryURL10Foundation0E0VvpZ">workingDirectoryURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>URL that points to the standardized working directory accounting for environmental changes.
+When running in Xcode, this returns the directory containing the <code>Package.swift</code> of the project,
+while outside Xcode it returns the current working directory.</p>
+<h3 id='usage-example' class='heading'>Usage Example:</h3>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">urlObject</span> <span class="o">=</span> <span class="kt">FileKit</span><span class="o">.</span><span class="n">workingDirectoryURL</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">workingDirectoryURL</span><span class="p">:</span> <span class="kt">URL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-12-12)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
